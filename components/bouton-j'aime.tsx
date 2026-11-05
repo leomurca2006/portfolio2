@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
-export default function BoutonJaime(){
+export default function BoutonJaime() {
 
-    const [aime,setAime] = useState(false)
+  const [estClique, setEstClique] = useState(false);
 
-    const style =aime 
-        ? "border-red-500 bg-red-500 text-white"
-        : "border-neutral-300 text-black"
-
-    return(
-        <button onClick={() => setAime(!aime)} className="rounded border px-3 py-1 text-sm ${style}">
-            {aime ? "J'aime" : "J'aime pas"}
-        </button>
-    )
+  return (
+    <button
+      onClick={() => setEstClique(!estClique)} 
+      className={`px-4 py-2 rounded-md font-medium transition-colors ${
+        estClique 
+          ? "bg-red-500 text-white"
+          : "bg-neutral-200 text-neutral-800" 
+      }`}
+    >
+      {estClique ? "J'aime " : "J'aime pas"}
+    </button>
+  );
 }

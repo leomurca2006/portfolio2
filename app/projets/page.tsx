@@ -16,5 +16,6 @@ export default function Projets() {
         </div>
       </Section>
     </main>
+    
   );
 }
