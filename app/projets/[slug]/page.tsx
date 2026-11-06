@@ -25,7 +25,6 @@ export default async function ProjetDetail({
 
       <p className="mt-6">{projet.resume}</p>
 
-      <video src={projet.video} controls className="mt-6 w-full rounded-lg" />
     </main>
   );
 }
