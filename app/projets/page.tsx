@@ -10,7 +10,7 @@ export default function Projets() {
         <div className="grid gap-4 sm:grid-cols-3">
           {PROJETS.map((p) => (
             <Link key={p.slug} href={`/projets/${p.slug}`}>
-              <Carte titre={p.titre} categorie={p.tags.join(", ")} resume={p.resume} />
+              <Carte titre={p.titre} categorie={p.tags.join(", ")} resume={p.resume} image={p.image} />
             </Link>
           ))}
         </div>

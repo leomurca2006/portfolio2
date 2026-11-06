@@ -1,15 +1,17 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const LIENS = [
     {href:"/", label: "Accueil"},
     {href:"/projets", label:"Projets"},
 ]
 
-
 export default function Menu(){
     return(
-        <nav className="flex items-center justify-between border-b border-neutral-200 py-4">
-            <Link href="/" className="font-semibold">Atelier Brume </Link>
+        <nav className="flex items-center justify-between border-b border-neutral-200 py-4 px-6 md:px-16">
+            <Link href="/">
+                <Image src="/mood-board.jpg" alt="Accueil" width={120} height={40} />
+            </Link>
             <ul className="flex gap-6 text-sm text-neutral-600">
                 {LIENS.map((lien)=>(
                     <li key={lien.href}>
