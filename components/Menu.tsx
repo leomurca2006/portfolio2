@@ -4,6 +4,7 @@ import Image from "next/image"
 const LIENS = [
     {href:"/", label: "Accueil"},
     {href:"/projets", label:"Projets"},
+    {href:"/contact", label:"Contact"},
 ]
 
 export default function Menu(){
